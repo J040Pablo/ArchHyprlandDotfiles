@@ -1,0 +1,71 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(15, 20, 25, 0.6); /* Cor escura com transparência */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #cdd6f4;
+}
+
+/* Efeito de Vidro nos Módulos */
+#workspaces, #window, #battery, #clock, #tray, #custom-wallpaper, #custom-power {
+padding: 0 12px;
+    margin: 4px 5px; /* Aumentei o margin horizontal para 5px para eles respirarem */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modules-right > widget:last-child > #custom-power {
+    margin-right: 15px;
+}
+
+/* Workspaces Específico */
+#workspaces {
+    background: transparent;
+    border: none;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #89dceb;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: rgba(137, 220, 235, 0.2);
+    border-radius: 8px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none; /* Remove a sombra da config anterior */
+}
+
+/* Destaque para o Relógio */
+#clock {
+    color: #89dceb;
+    font-weight: bold;
+}
+
+/* Botão de Power */
+#custom-power {
+    color: #f38ba8;
+    background: rgba(243, 139, 168, 0.1);
+}
+
+#custom-power:hover {
+    background: #f38ba8;
+    color: #1e1e2e;
+}
+
+/* Hover em tudo */
+#battery:hover, #clock:hover, #custom-wallpaper:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
