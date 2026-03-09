@@ -11,4 +11,4 @@ Configurations for my Arch Linux + Hyprland setup.
 
 ## Installation
 
-git clone https://github.com/usuario/dotfiles
+git clone https://github.com/J040Pablo/ArchHyprlandDotfiles
