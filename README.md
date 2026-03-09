@@ -1,14 +1,13 @@
-# My Dotfiles
+# Arch Hyprland Dotfiles
 
-Configurations for my Arch Linux + Hyprland setup.
+My personal dotfiles for Arch Linux using Hyprland.
 
-## Includes
+## Components
+
 - Hyprland
 - Waybar
 - Kitty
 - Wofi
-- GTK themes
-
-## Installation
-
-git clone https://github.com/J040Pablo/ArchHyprlandDotfiles
+- GTK Themes
+- Kvantum
+- btop
