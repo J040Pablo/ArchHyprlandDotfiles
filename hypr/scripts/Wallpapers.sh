@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
+
+if ! pgrep -x hyprpaper >/dev/null; then
+    hyprpaper &
+    sleep 1
+fi
+
 # Pasta dos wallpapers
 WALLPAPERS_DIR="$HOME/Imagens/Wallpapers"
 
 # Arquivo que guarda o índice atual
 INDEX_FILE="$HOME/.cache/current_wallpaper_index"
 
-# Monitor alvo
-MONITOR="eDP-1"
+# Monitores alvo
+MONITORS=("HDMI-A-1" "eDP-1")
 
 # Cria o arquivo de índice se não existir
 mkdir -p "$HOME/.cache"
@@ -34,7 +40,10 @@ NEW_WP="${WALLPAPERS[$NEXT_INDEX]}"
 
 # Aplica sem reiniciar o hyprpaper
 hyprctl hyprpaper preload "$NEW_WP"
-hyprctl hyprpaper wallpaper "$MONITOR,$NEW_WP"
+
+for MONITOR in "${MONITORS[@]}"; do
+    hyprctl hyprpaper wallpaper "$MONITOR,$NEW_WP"
+done
 
 # Atualiza índice
 echo "$NEXT_INDEX" > "$INDEX_FILE"

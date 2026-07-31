@@ -1,0 +1,4 @@
+windowrulev = suppressevent maximize, class:.*
+windowrulev = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+windowrulev = nofocus,class:^$, wayland:1,floating:1,fullscreen:0,pinned:0
+windowrulev = float 1, match:class org.pulseaudio.pavucontrol
