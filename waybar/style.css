@@ -7,26 +7,41 @@
 }
 
 window#waybar {
-    background: rgba(15, 20, 25, 0.6); /* Cor escura com transparência */
+    background: rgba(15, 20, 25, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: #cdd6f4;
 }
 
-/* Efeito de Vidro nos Módulos */
-#workspaces, #window, #battery, #clock, #tray, #custom-wallpaper, #custom-power {
-padding: 0 12px;
-    margin: 4px 5px; /* Aumentei o margin horizontal para 5px para eles respirarem */
+/* módulos */
+#workspaces,
+#window,
+#battery,
+#clock,
+#tray,
+#custom-wallpaper,
+#custom-power,
+#pulseaudio,
+#backlight,
+#custom-laptop,
+#custom-system {
+    padding: 0 12px;
+    margin: 4px 5px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#custom-system:hover {
+    background: rgba(255,255,255,.15);
 }
 
 .modules-right > widget:last-child > #custom-power {
     margin-right: 15px;
 }
 
-/* Workspaces Específico */
+/* workspaces */
+
 #workspaces {
     background: transparent;
     border: none;
@@ -45,16 +60,17 @@ padding: 0 12px;
 
 #workspaces button:hover {
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: none; /* Remove a sombra da config anterior */
 }
 
-/* Destaque para o Relógio */
+/* clock */
+
 #clock {
     color: #89dceb;
     font-weight: bold;
 }
 
-/* Botão de Power */
+/* power */
+
 #custom-power {
     color: #f38ba8;
     background: rgba(243, 139, 168, 0.1);
@@ -65,7 +81,10 @@ padding: 0 12px;
     color: #1e1e2e;
 }
 
-/* Hover em tudo */
-#battery:hover, #clock:hover, #custom-wallpaper:hover {
+/* hover */
+
+#battery:hover,
+#clock:hover,
+#custom-wallpaper:hover {
     background: rgba(255, 255, 255, 0.15);
 }
